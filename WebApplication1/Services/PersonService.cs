@@ -1,17 +1,15 @@
 ﻿using Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace WpfApp1.Services
+namespace WebApplication1.Services
 {
-    internal class MockPersonService : IPersonService
+    public class PersonService
     {
-        public IEnumerable<Person> GetAll()
+        private readonly List<Person> personList;
+
+        public PersonService()
         {
-            return new List<Person> 
+            personList = new List<Person>
             {
                 new Person {Id = 1, Age=30, Name= "Jan", Surname="Kowalski"},
                 new Person {Id = 2, Age=35, Name= "Robert", Surname="Nowak"},
@@ -19,6 +17,16 @@ namespace WpfApp1.Services
                 new Person {Id = 4, Age=36, Name= "Anna", Surname="Dziedzic"},
                 new Person {Id = 5, Age=32, Name= "Adam", Surname="Fierek"}
             };
+        }
+
+        public IEnumerable<Person> GetAll()
+        {
+            return personList;
+        }
+
+        public void Add(Person person)
+        {
+            personList.Add(person);
         }
     }
 }
