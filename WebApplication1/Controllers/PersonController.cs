@@ -42,10 +42,10 @@ namespace WebApplication1.Controllers
             return Ok();
         }
 
-        [HttpGet("fish/{id:int}")]
-        public IActionResult GetPhoto(int id)
-        {
+        //[HttpGet("fish/{id:int}")]
+        //public IActionResult GetPhoto(int id)
+        //{
 
-        }
+        //}
     }
 }
