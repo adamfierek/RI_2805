@@ -1,10 +1,10 @@
-﻿using Mvvm;
+﻿using Models;
+using Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfApp1.Models;
 using WpfApp1.Services;
 
 namespace WpfApp1.ViewModels
@@ -17,13 +17,13 @@ namespace WpfApp1.ViewModels
 
         private System.Timers.Timer timer;
 
-        private IPersonService personService;
+        private IPersonServiceAsync personService;
 
         private bool isEnabled = true;
         public string State { get => state; set => Set(ref state, value); }
         public List<Person> PersonList { get; private set; }
 
-        public MainWindowViewModel(IPersonService _personService)
+        public MainWindowViewModel(IPersonServiceAsync _personService)
         {
             TimerCommand = new Command(_TimerCommand);
 
@@ -32,10 +32,15 @@ namespace WpfApp1.ViewModels
             timer.Elapsed += Timer_Elapsed;
             timer.Start();
             personService = _personService;
-            PersonList = personService.GetAll().ToList();
+            Task.Run(LoadData);
         }
 
-        private void _TimerCommand()
+        private async Task LoadData()
+        {
+            PersonList = (await personService.GetAll()).ToList();
+        }
+
+        private async void _TimerCommand()
         {
             //if (isEnabled)
             //{
@@ -47,7 +52,7 @@ namespace WpfApp1.ViewModels
             //    timer?.Start();
             //    isEnabled = true;
             //}
-            PersonList = personService.GetAll().ToList();
+            await LoadData();
             OnPropertyChanged(nameof(PersonList));
         }
 

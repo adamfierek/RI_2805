@@ -2,28 +2,17 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace Test2805
 {
     internal class Program
     {
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        public static extern int MessageBox(IntPtr hWnd, String text, String caption, uint type);
         static async Task Main(string[] args)
         {
-            var fruits = new List<string>
-            {
-                "Apple",
-                "Banana",
-                "Orange",
-                "Lemon"
-            };
-
-            var result = fruits
-                .Where(f => f.Length == 5)
-                .Select(f=>string.Concat(f.Reverse()));
-
-            var result2 = from f in fruits where f.Length == 5 select f;
-
-            Console.WriteLine(string.Join(' ', result));
+            MessageBox(IntPtr.Zero, "Witajcie!", "Okno WinApi", 0);
         }
     }
 }

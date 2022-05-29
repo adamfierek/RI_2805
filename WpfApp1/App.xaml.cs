@@ -30,7 +30,7 @@ namespace WpfApp1
         private void ConfigureServices(ServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient(typeof(MainWindow));
-            serviceCollection.AddSingleton<IPersonService, MockPersonService>();
+            serviceCollection.AddSingleton<IPersonServiceAsync, ApiService>();
             serviceCollection.AddSingleton<MainWindowViewModel>();
         }
     }

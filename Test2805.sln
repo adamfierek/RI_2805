@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32519.111
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test2805", "Test2805\Test2805.csproj", "{89D72930-C7E8-4F25-9FA8-3A4B11950D10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test2805", "Test2805\Test2805.csproj", "{89D72930-C7E8-4F25-9FA8-3A4B11950D10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{35062E62-74B3-4EBE-B601-D4AE3D201271}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{35062E62-74B3-4EBE-B601-D4AE3D201271}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvvm", "Mvvm\Mvvm.csproj", "{E773FD1E-AEFC-4A7A-8C43-FB6C27E3F416}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvvm", "Mvvm\Mvvm.csproj", "{E773FD1E-AEFC-4A7A-8C43-FB6C27E3F416}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{D306A3FD-16C9-4687-BFF0-1A76D2C70B52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{D306A3FD-16C9-4687-BFF0-1A76D2C70B52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{261706B0-BFF9-4B14-A40D-6F20EFFC6411}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{261706B0-BFF9-4B14-A40D-6F20EFFC6411}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
